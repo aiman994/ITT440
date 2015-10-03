@@ -23,10 +23,11 @@ while True:
 	state = s.getsockopt(SOL_SOCKET, SO_REUSEADDR )
 
 	print " get sock buff send : " , bufsize
+	print " get reuseaddr  : " , state
 	print " get timeout  : " , timeoutb4
 	afterset = s.setsockopt(SOL_SOCKET , SO_REUSEADDR ,1)
 	timeoutafter = s.settimeout(5)
-	print  " set time out : " , afterset
-
+	print  " Get AFTER Set reuseaddr : " , s.getsockopt(SOL_SOCKET,SO_REUSEADDR)
+	print " get AFTER Set timeout  : " , s.gettimeout()
 	
 conn.close()

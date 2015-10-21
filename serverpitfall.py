@@ -9,8 +9,7 @@ s.bind(HOST)
 
 while True:
 	try:
-#		conn,address = s.recvfrom(1055) 
-		status = s.connect(HOST)
+		conn,address = s.recvfrom(1055) 
 		if status < 0:
 			s
 			print " error " ,os.strerror(errno.EFAULT), ": " , errno.EFAULT
